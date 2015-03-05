@@ -1,0 +1,225 @@
+// 引入公共文件
+@import "../lib/base/global";
+
+// 修改基础宽度为750px，针对iPhone6
+@width_base:750px;
+@px2rem:1rem / 46.875;	// 375px宽度屏幕对应的1px = 1/ 46.875rem
+
+
+body {
+    padding:0px;
+    margin:0px;           
+}
+
+#sensor{
+    position: absolute;
+    left:@px2rem * 550;
+    top: @px2rem * 400;
+    width:200px;
+    height: 100px;
+    color:red;
+    border:1px solid red;
+
+}
+
+#viewports {
+    position:absolute;
+    border:4px solid #000;
+    background-color:#6a4ea7;
+    width:@px2rem * 640;
+    height:@px2rem * 384;
+
+}
+
+// .tile{
+//     // width:@px2rem * 64 !important;
+//     // height:@px2rem * 64 !important;
+//     // background-repeat: no-repeat;
+    
+// }
+
+#smallclouds .handle .tile:first-child{
+    border:2px solid red!important;
+}
+#smallclouds .handle .tile:nth-child(10){
+    border:2px solid green!important;
+}
+#smallclouds .handle .tile:nth-child(11){
+    border:2px solid yellow!important;
+}
+
+
+
+#origin_resp_rem{
+    &:before{
+        content:"响应式，rem";
+        position:absolute;
+        right:0;
+        bottom:0;
+        background-color: white;
+
+    }
+    position:absolute;
+    top: @px2rem * 400;
+    background-color:#4e974e;
+    width:@px2rem * 512;
+    height:@px2rem * 320;   
+    @tile_size : @px2rem * 64;
+    > .pic{
+        position:absolute;
+        top:0;
+        left:0;
+        width:@tile_size;
+        height:@tile_size;
+        // background-color: #f7c5a4;
+        background-repeat: no-repeat;
+        background-image:url(http://gtms04.alicdn.com/tps/i4/TB1pwALHXXXXXaHXpXXlf1uQVXX-512-320.png);
+    
+        background-size: (100% * 512 / 64) auto;
+
+
+    }
+
+    .loopOuter(@j) when (@j >= 0){
+
+     .loopInner(@i) when (@i > 8*@j){
+
+            .pic:nth-of-type(@{i}) {
+                left:@tile_size * (@i - 1 - 8*@j);
+                top:@tile_size * @j;
+
+                background-position: (-@px2rem*64*(@i - 1 - 8*@j)) (-@px2rem * 64 * @j);
+            }
+
+            .loopInner(@i - 1);
+        }
+
+        .loopInner((@j+1)*8);   
+
+
+        .loopOuter(@j - 1);
+
+    }
+
+    .loopOuter(4);
+
+}
+
+
+#origin_resp_perc{
+    &:before{
+        content:"响应式，百分比";
+        position:absolute;
+        right:0;
+        bottom:0;
+        background-color: white;
+
+    }    
+    @w_tile:64;
+    @h_tile:64;
+    @w_sprite:512;
+    @h_sprite:320;
+    position:absolute;
+    top: @px2rem * 750;
+    background-color:#4e974e;
+    width:@px2rem * @w_sprite;
+    height:@px2rem * @h_sprite;   
+    @tile_size : @px2rem * @w_tile;
+
+    > .pic{
+        position:absolute;
+        top:0;
+        left:0;
+        width:@tile_size;
+        height:@tile_size;
+        // background-color: #f7c5a4;
+        background-repeat: no-repeat;
+        background-image:url(http://gtms04.alicdn.com/tps/i4/TB1pwALHXXXXXaHXpXXlf1uQVXX-512-320.png);
+    
+        background-size: (100% * 512 / 64) auto;
+
+
+    }
+
+    .loopOuter(@j) when (@j >= 0){
+
+     .loopInner(@i) when (@i > 8*@j){
+
+            .pic:nth-of-type(@{i}) {
+                left:@tile_size * (@i - 1 - 8*@j);
+                top:@tile_size * @j;
+
+                background-position: (-100% * @w_tile * (@i - 1 - 8*@j) / (@w_tile - @w_sprite)) (-100% * @h_tile * @j / (@h_tile - @h_sprite));
+            }
+
+            .loopInner(@i - 1);
+        }
+
+        .loopInner((@j+1)*8);   
+
+
+        .loopOuter(@j - 1);
+
+    }
+
+    .loopOuter(4);
+
+}
+
+
+
+#origin{
+    &:before{
+        content:"原始图片";
+        position:absolute;
+        right:0;
+        bottom:0;
+        background-color: white;
+
+    }    
+    position:absolute;
+    top: @px2rem * 1100;
+    background-color:#4e974e;
+    width:512px;
+    height:320px;   
+    @tile_size : 64px;
+    > .pic{
+        position:absolute;
+        top:0;
+        left:0;
+        width:@tile_size;
+        height:@tile_size;
+        // background-color: #f7c5a4;
+        background-repeat: no-repeat;
+        background-image:url(http://gtms04.alicdn.com/tps/i4/TB1pwALHXXXXXaHXpXXlf1uQVXX-512-320.png);
+    
+        // background-size: (100% * 512 / 64) auto;
+
+
+    }
+
+    .loopOuter(@j) when (@j >= 0){
+
+     .loopInner(@i) when (@i > 8*@j){
+
+            .pic:nth-of-type(@{i}) {
+                left:@tile_size * (@i - 1 - 8*@j);
+                top:@tile_size * @j;
+
+                background-position: (-64px * (@i - 1 - 8*@j)) (-64px * @j);
+            }
+
+            .loopInner(@i - 1);
+        }
+
+        .loopInner((@j+1)*8);   
+
+
+        .loopOuter(@j - 1);
+
+    }
+
+    .loopOuter(4);
+
+}
+

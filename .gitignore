@@ -1,0 +1,17 @@
+.editorconfig
+.jshintrc
+
+.travis.yml
+*.swp
+.sass-cache/
+mods/.sass-cache/
+.DS_Store
+
+
+node_modules/
+bower_components/
+dist/
+
+*/dist/
+*/bower_components/
+*/node_modules/
