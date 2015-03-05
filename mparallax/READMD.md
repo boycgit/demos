@@ -1,6 +1,6 @@
 ## 视差卷轴
 
-![效果图](https://lh3.googleusercontent.com/-ln9_cU20UII/VPgpGY2xDtI/AAAAAAAACU4/hMNZlJVcHGw/s144/parallax.JPG)
+![效果图](https://lh3.googleusercontent.com/-ln9_cU20UII/VPgpGY2xDtI/AAAAAAAACU4/hMNZlJVcHGw/s640/parallax.JPG)
 
 
 使用CommonJS方式组织代码，由于使用require方式，因此要查看代码需启动本地服务器。
