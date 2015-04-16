@@ -3,6 +3,7 @@
 ### 程序列表
 
  - [视差卷轴](./mparallax/README.md)
+ - [替换字符串(文件夹级别递归)](./reps/README.md)
 
 
 ### Changelog

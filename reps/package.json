@@ -1,0 +1,12 @@
+{
+  "name": "reps",
+  "version": "1.0.0",
+  "dependencies": {
+    "argv": "0.0.2",
+    "mkdirp": "*",
+    "node-dir": "*"
+  },
+  "bin": {
+    "node-echo": "./bin/reps"
+  }
+}
