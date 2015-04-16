@@ -1,0 +1,8 @@
+node_modules/
+tests/
+.editorconfig
+.jshintrc
+
+.travis.yml
+.sass-cache/
+.DS_Store
