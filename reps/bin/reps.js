@@ -8,7 +8,7 @@ var fs = require('fs')
 
 var argv = require( 'argv' );
 
-argv.version( 'v0.0.1' );
+argv.version( 'v1.0.5' );
 
 // 旧的字符串
 argv.option({
@@ -68,27 +68,27 @@ if(!isReg){
 	oldStrReg = new RegExp(oldStr,'g');
 }
 
+// console.log(process.cwd(),__dirname);
 
-
-console.log(args);
+// console.log(args);
 
 // var srcDir = 'tests/ori',destDir = 'tests/test';
 
-dir.files(path.join(__dirname,srcDir),function(err,files){
+dir.files(path.join(process.cwd(),srcDir),function(err,files){
     if (err) throw err;
 
 
     console.log("正在创建文件夹....");
 
-    mkdirp.sync(path.join(__dirname,destDir));//先创建目录
+    mkdirp.sync(path.join(process.cwd(),destDir));//先创建目录
     // 处理文件
     for(var i = 0;i<files.length;i++){
 
-		var relPath = path.relative(path.join(__dirname,srcDir),path.dirname(files[i]));
+		var relPath = path.relative(path.join(process.cwd(),srcDir),path.dirname(files[i]));
 
-		var destSubDir = path.join(__dirname,destDir,relPath);  
+		var destSubDir = path.join(process.cwd(),destDir,relPath);  
 	
-		console.log(__dirname,destDir,relPath,destSubDir);
+		// console.log(process.cwd(),destDir,relPath,destSubDir);
 
 		// 先同步创建文件夹 	
 		
@@ -98,18 +98,20 @@ dir.files(path.join(__dirname,srcDir),function(err,files){
 	console.log("创建完成！");
 
 
-	console.log("开始替换文件内容....");
+	console.log("开始替换文件内容（正则） "+oldStr+" -> "+newStr+"....");
     // 再异步化copy 替换文件
     for(var i = 0;i<files.length;i++){
 
      	(function(index){
 	    	setTimeout(function(){
 
+	    		// 获取文件相对路径
+				var relPath = path.relative(path.join(process.cwd(),srcDir),path.dirname(files[index]));
 
-				var relPath = path.relative(path.join(__dirname,srcDir),path.dirname(files[index]));
+				// 计算出目标路径
+				var destSubDir = path.join(process.cwd(),destDir,relPath);  
 
-				var destSubDir = path.join(__dirname,destDir,relPath);  
-
+				// 拼接出目标文件
 				var destFile = path.join(destSubDir,path.basename(files[index]));
 
 				var str = fs.readFileSync(files[index],'binary');

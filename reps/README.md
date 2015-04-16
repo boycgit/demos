@@ -14,6 +14,14 @@
 
 ### 如何使用？
 
+首先全局安装：
+
+```shell
+npm install -g reps
+```
+
+切换到具体目录，试一下下面的命令：
+
 命令行格式：
 ```shell
 reps origin [dest] [--old oldStr] [--new newStr] [--reg]
@@ -53,3 +61,6 @@ reps tests/ori tests/dest --old a.com --new b.net
  2. 正则示例：`node reps.js ../tests/ori ../go  -o '\d{2,3}' -n 'jscon' -r` 将会使用正则匹配；
  3. 非正则匹配示例：`node reps.js ../tests/ori ./go  -o 'jscon' -n 'boyc'`
 
+## Changelog
+
+**2015.04.16（星期四）** 创建此脚本，修复相对路径，使用 `process.cwd()` 代替 `__dirname`变量 
