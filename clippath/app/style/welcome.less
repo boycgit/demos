@@ -1,0 +1,116 @@
+
+@import '../lib/base/lesshat';
+
+
+.clip-path(...) {
+  @process: ~`(function(r){return r||"border-box"})((function(){var r="@{arguments}";return r=r.replace(/^\[|\]$/g,"")})())`;
+  -webkit-clip-path: @process;
+  clip-path: @process;
+	&:after{
+		display: none;
+		content:'@{process}';
+	}
+
+}
+
+
+
+body{
+	background-color: #466F9E;
+
+}
+
+.container{
+	position: absolute;
+	left:50%;
+	margin-top:150px;
+
+	.translate3d(-50%,0,0);
+
+}
+
+.tri-shape{	// 只在firefox和chrome中使用，其他浏览器使用图片代替
+	position: absolute;
+	display: none;
+
+	.ks-chrome &,.ks-firefox &{
+		display: block;
+	}
+
+	&.-img{
+		display: block;
+		.ks-chrome &,.ks-firefox &{
+			display: none;
+		}
+
+
+
+		// 添加动效
+		.transition(1s);
+		.scale(1);
+
+		.-init &{
+			.scale(0);
+		}
+
+		&#img-mt{
+			.transition-delay(1s);
+		}
+	}
+}
+
+
+
+.tri{
+	display: inline-block;
+	position: absolute;
+
+	#letters &{
+
+		.transition(1s);
+
+		.-init &{
+			.clip-path(polygon(0 0,50% 20%,100% 0))!important;
+
+		}
+
+		// 针对firefox 进行动画hack
+		.ks-firefox &{
+			.scale(1);
+		}
+
+		.ks-firefox .-init &{
+			.scale(0);
+		}
+	}
+	
+
+}
+
+
+
+
+
+
+// minix 函数
+.setFlick(@c,@step,@time){
+
+	background-color: @c;
+
+	.transition-delay(@time);
+	.-flick&{
+		background-color: lighten(@c, @step);
+	}
+
+}
+
+
+
+@import './welcome/letter';
+
+@import './welcome/mountain';
+
+@import './welcome/slogan';
+
+
+

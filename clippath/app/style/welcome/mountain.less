@@ -1,0 +1,207 @@
+// 大山
+
+#mountain{
+	position: relative;
+	margin: 209px 0 0 25px;
+	height:52px;
+
+	.scale(0);
+
+	.tri-shape{
+		position: absolute;
+
+	}
+
+	.tri-shape .tri{
+		width:100%;
+		height:100%;
+	}
+
+	.-show&{
+		.transition(1s);
+		
+		.scale(1);
+	}
+}
+
+
+
+#mt-after{
+	bottom:7px;
+	left:97px;
+	width:137px;
+	height:59px;
+
+
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(polygon(50% 0, 0 100%, 100% 100%));
+			background-color: hsv(360,8%,70%);
+		}
+
+		&:nth-child(2){
+			.clip-path(polygon(50% 0, 81% 100%, 100% 100%));
+			background-color: hsv(0,0%,100%);
+		}
+
+
+
+	}
+
+}
+
+
+#mt-bg{
+	bottom:-5px;
+	width:335px;
+	height:5px;
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(polygon(0 0, 35% 100%, 45% 0));
+			background-color: hsv(360,2%,27%);
+		}
+
+		&:nth-child(2){
+			.clip-path(polygon(100% 0, 65% 100%, 55% 0));
+			background-color: hsv(360,2%,27%);
+		}
+
+
+
+	}
+
+}
+
+
+
+
+#mt-left{
+	bottom: 0px;
+	width:147px;
+	height:39px;
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(polygon(34% 0, 0 100%, 67% 100%));
+			background-color: hsv(360,8%,84%);
+		}
+
+		&:nth-child(2){
+			.clip-path(polygon(34% 0, 47% 72%, 53% 58%));
+			background-color: hsv(360,8%,34%);
+		}
+
+
+		&:nth-child(3){
+			.clip-path(polygon(66% 29%, 33% 100%, 44% 100%));
+			background-color: hsv(360,8%,54%);
+		}
+
+		&:nth-child(4){
+			.clip-path(polygon(66% 31%, 44% 100%, 100% 100%));
+			background-color: hsv(360,8%,84%);
+		}
+
+
+
+	}
+
+}
+
+#mt-right{
+	left: 185px;
+	bottom: 0px;
+	width:147px;
+	height:21px;
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(polygon(34% 0, 0 100%, 67% 100%));
+			background-color: hsv(360,8%,84%);
+		}
+
+		&:nth-child(2){
+			.clip-path(polygon(34% 0, 47% 72%, 53% 58%));
+			background-color: hsv(360,8%,34%);
+		}
+
+
+		&:nth-child(3){
+			.clip-path(polygon(66% 29%, 33% 100%, 44% 100%));
+			background-color: hsv(360,8%,54%);
+		}
+
+		&:nth-child(4){
+			.clip-path(polygon(66% 31%, 44% 100%, 100% 100%));
+			background-color: hsv(360,8%,84%);
+		}
+
+	}
+
+}
+
+
+#cloud-after{
+	top:0px;
+	left:176px;
+	width:61px;
+	height:15px;
+	.opacity(0.78);
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(ellipse(44% 35% at 45% 60%));
+			background-color: hsv(0,0%,100%);
+		}
+
+		&:nth-child(2){
+			.clip-path(ellipse(44% 35% at 52% 64%));
+			background-color: hsv(0,0%,100%);
+		}
+
+		&:nth-child(3){
+			.clip-path(ellipse(18% 40% at 80% 49%));
+			background-color: hsv(0,0%,100%);
+		}
+
+
+
+	}
+
+}
+
+
+#cloud-fore{
+	top:10px;
+	left:78px;
+	width:90px;
+	height:15px;
+	.tri{
+
+		&:nth-child(1){
+			.clip-path(ellipse(22% 33% at 25% 40%));
+			background-color: hsv(0,0%,100%);
+		}
+
+		&:nth-child(2){
+			.clip-path(ellipse(37% 44% at 50% 56%));
+			background-color: hsv(0,0%,100%);
+		}
+
+		&:nth-child(3){
+			.clip-path(ellipse(25% 26% at 73% 44%));
+			background-color: hsv(0,0%,100%);
+		}
+
+
+
+	}
+
+}
+
+
+
+// 白云
+

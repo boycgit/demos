@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>欢迎入驻LAB</title>
+    <meta charset="UTF-8">
+    <!-- 引入seed -->
+    <script src="http://cdn.bootcss.com/jquery/1.8.1/jquery.js"></script>
+
+    <link rel="stylesheet" href="./style/welcome.css">
+
+</head>
+<body class="lab-welcome">
+
+
+
+
+<!-- 去掉顺序：先去 -init 过 1s后去 -delay0 同时加上 -flick，过1s后去掉-flick -->
+
+    <!-- 用于展示核心内容 -->
+    <div class="container -init">
+
+        <!-- 字母系列 -->
+        <div id="letters">
+            
+            <div class="tri-shape -delay0" id="word-l">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>
+                <i class="tri" data-order="3"></i>
+
+            </div> 
+
+
+            <div class="tri-shape -delay0" id="word-a">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>
+                <i class="tri" data-order="3"></i>           
+                <i class="tri" data-order="4"></i>           
+
+            </div> 
+
+
+            <div class="tri-shape -delay0" id="word-b">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>
+                <i class="tri" data-order="3"></i>           
+                <i class="tri" data-order="4"></i>              
+                <i class="tri" data-order="5"></i>
+                <i class="tri" data-order="6"></i>
+                <i class="tri" data-order="7"></i>           
+                <i class="tri" data-order="8"></i>              
+
+            </div> 
+
+            <div class="tri-shape -img" id="img-lab">
+                <img src="http://gtms03.alicdn.com/tps/i3/TB1LJ4jHFXXXXa2XVXXA9leVVXX-386-153.png" alt="lab">
+            </div>
+            
+        </div>
+
+
+        <!-- 大山 -->
+        <div id="mountain">
+
+            <!-- 白云 -->
+            <div class="tri-shape" id="cloud-after">
+                 <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>               
+                <i class="tri" data-order="3"></i>               
+            </div>
+
+            <div class="tri-shape" id="mt-bg">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>
+            </div>
+
+            <div class="tri-shape" id="mt-after">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>               
+            </div>
+
+            <div class="tri-shape" id="mt-left">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>                
+                <i class="tri" data-order="3"></i>
+                <i class="tri" data-order="4"></i>
+            </div>
+
+            <div class="tri-shape" id="mt-right">
+                <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>                
+                <i class="tri" data-order="3"></i>
+                <i class="tri" data-order="4"></i>               
+
+            </div>
+
+
+            <div class="tri-shape" id="cloud-fore">
+                   <i class="tri" data-order="1"></i>
+                <i class="tri" data-order="2"></i>               
+                <i class="tri" data-order="3"></i>                
+            </div>
+
+            <div class="tri-shape -img" id="img-mt">
+                <img src="http://gtms02.alicdn.com/tps/i2/TB1ECpkHFXXXXcIXFXX51MpNpXX-335-70.png" alt="lab">
+            </div>            
+
+        </div>
+
+        <!-- 文案 -->
+        <div id="slogan">
+            <p>欢迎来到<a href="#">Lab</a></p>
+            <p>在这里你可以天马行空，折腾你喜欢的事儿！</p>
+        </div>
+
+    </div>
+
+<div id="calcPaths"></div>
+
+
+</body>
+
+<script src="./lib/systemjs/system.js"></script>
+<script>
+  // Identical to writing System.baseURL = ...
+  System.config({
+
+    // set all requires to "lib" for library code
+    baseURL: './script',
+
+    // set "app" as an exception for our application code
+    paths: {
+      'app/*': '/app/*.js'
+    }
+  });
+
+  System.import('welcome')
+</script>
+
+</html>

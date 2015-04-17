@@ -1,0 +1,144 @@
+
+// 字母特效
+#word-l{
+
+	width:90px;
+	height:141px;
+	
+	.tri{
+		width: 100%;
+		height:100%;
+
+		@color:hsv(212,78%,83%);
+		@color2:hsv(212,75%,96%);
+		@color3:hsv(212,72%,90%);
+
+		&:nth-child(1){
+			.clip-path(polygon(1% 0, 16% 95%, 0 97%));
+
+			.setFlick(@color,10%,1);
+
+			&:after{
+				display: none;
+				content:'polygon(1% 0, 16% 95%, 0 97%)';
+			}
+
+		}
+		&:nth-child(2){
+			.clip-path(polygon(1% 0, 18% 21%, 16% 98%));
+
+			.setFlick(@color2,20%,0.5);
+
+
+			&:after{
+				display: none;
+				content:'polygon(1% 0, 18% 21%, 16% 98%)';
+			}
+
+
+		}
+
+		&:nth-child(3){
+			.clip-path(polygon(89% 89%, 100% 100%, 3% 97%));
+
+			.setFlick(@color3,20%,0);
+
+			&:after{
+				display: none;
+				content:'polygon(89% 89%, 100% 100%, 3% 97%)';
+			}
+
+		}
+	}
+
+}
+
+#word-a{
+	margin-left:140px;
+	.tri{
+		width:110px;
+		height:140px;
+
+		@color:hsv(33,87%,85%);
+		@color2:hsv(41,87%,94%);
+		@color3:hsv(39,87%,85%);
+		@color4:hsv(33,87%,68%);
+
+		&:nth-child(1){
+			.clip-path(polygon(2% 70%, 0 100%, 45% 0));
+			.setFlick(@color,20%,1);
+		}
+		&:nth-child(2){
+			.clip-path(polygon(39% 16%, 100% 100%, 44% 3%));
+			.setFlick(@color2,20%,0);
+
+		}
+
+		&:nth-child(3){
+			.clip-path(polygon(13% 71%, 66% 58%, 18% 63%));
+			.setFlick(@color3,20%,0.5);
+		}
+		&:nth-child(4){
+			.clip-path(polygon(13% 71%, 77% 71%, 67% 58%));
+			.setFlick(@color4,20%,0.5);
+		}
+
+	}
+}
+
+
+#word-b{
+	margin-left:310px;
+	.tri{
+		width:100px;
+		height:140px;
+
+		@color:hsv(90,70%,53%);
+		@color2:hsv(90,87%,82%);
+		@color3:@color;
+		@color4:@color2;
+		@color5:hsv(90,87%,59%);
+		@color6:@color2;
+		@color7:hsv(90,87%,60%);
+		@color8:hsv(90,87%,63%);
+
+		&:nth-child(1){
+			.clip-path(polygon(2% 0, 0 100%, 14% 89%));
+			.setFlick(@color,20%,1);
+		}
+		&:nth-child(2){
+			.clip-path(polygon(14% 84%, 14% 20%, 2% 1%));
+			.setFlick(@color2,20%,0.8);
+
+		}
+
+		&:nth-child(3){
+			.clip-path(polygon(14% 14%, 92% 2%, 2% 1%));
+			.setFlick(@color3,20%,0.5);
+		}
+		&:nth-child(4){
+			.clip-path(polygon(67% 6%, 38% 47%, 91% 3%));
+			.setFlick(@color4,20%,0);
+		}
+
+		&:nth-child(5){
+			.clip-path(polygon(39% 46%, 68% 6%, 56% 8%));
+			.setFlick(@color5,20%,0.3);
+		}
+		&:nth-child(6){
+			.clip-path(polygon(37% 46%, 76% 95%, 98% 98%));
+			.setFlick(@color6,20%,0);
+
+		}
+
+		&:nth-child(7){
+			.clip-path(polygon(37% 46%, 61% 96%, 77% 96%));
+			.setFlick(@color7,20%,0.3);
+		}
+		&:nth-child(8){
+			.clip-path(polygon(13% 90%, 2% 99%, 96% 97%));
+			.setFlick(@color8,20%,0.8);
+		}
+
+	}
+}

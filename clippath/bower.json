@@ -1,0 +1,28 @@
+{
+  "name": "anim",
+  "version": "0.0.1",
+  "authors": [
+    "boycgit<inningbo123@sina.com>"
+  ],
+  "description": "animate for phone app",
+  "main": "welcome.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "animate",
+    "a2a"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/boycgit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "system.js": "git://github.com/systemjs/systemjs.git#~0.10.2"
+  }
+}
