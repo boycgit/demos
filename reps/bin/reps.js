@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 var fs = require('fs')
   , dir = require('node-dir')
   , mkdirp = require('mkdirp')
@@ -8,7 +7,7 @@ var fs = require('fs')
 
 var argv = require( 'argv' );
 
-argv.version( 'v1.0.5' );
+argv.version( 'v1.0.7' );
 
 // 旧的字符串
 argv.option({

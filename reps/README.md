@@ -1,5 +1,7 @@
 ## 文件递归替换
 
+![命令截图](http://ww2.sinaimg.cn/mw690/514b710agw1er8punr30ij20ix0dgwj5.jpg)
+
 简单的文件查找和替换命令行
 
 业务场景：要将目录下所有的文件（js、CSS等等）中的'a.com'替换成'b.net'等。支持正则匹配。
@@ -63,4 +65,6 @@ reps tests/ori tests/dest --old a.com --new b.net
 
 ## Changelog
 
+
+**2015.04.17（星期五）** 兼容linux下的环境 
 **2015.04.16（星期四）** 创建此脚本，修复相对路径，使用 `process.cwd()` 代替 `__dirname`变量 
