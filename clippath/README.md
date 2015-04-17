@@ -2,7 +2,9 @@
 
 使用 Clip-path 制造的动画，其效果过渡较为好看。
 
-<video src="##" controls="controls">
+![效果截图](http://ww3.sinaimg.cn/mw690/514b710agw1er8p9mj6r8j20lo0in3zw.jpg)
+
+<video src="https://vimeo.com/125215668" controls="controls">
 your browser does not support the video tag
 </video>
 
