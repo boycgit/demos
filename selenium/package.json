@@ -1,0 +1,20 @@
+{
+  "name": "selenium",
+  "version": "1.0.0",
+  "description": "使用nodejs+selenium Driver检测登录",
+  "main": "login-verify.js",
+  "dependencies": {
+    "selenium-webdriver": "^2.45.1",
+    "should": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "selenium",
+    "nodejs"
+  ],
+  "author": "boycgit",
+  "license": "MIT"
+}
