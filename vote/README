@@ -1,0 +1,22 @@
+## 投票
+
+本质就是使用node作为简单的客户端服务器向远程发送请求而已。
+
+
+### 如何使用？
+
+首先全局安装：
+
+```shell
+npm install -g myvote
+```
+
+调用方式：
+```js
+node myvote.js -n 500 -t 500
+```
+
+## changelog
+
+### v1.0.3
+ - package.json中的bin字段，解决' Error: ENOENT, chmod'错误
