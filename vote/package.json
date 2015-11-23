@@ -1,6 +1,6 @@
 {
   "name": "myvote",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "for vote",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "argv": "0.0.2",
-    "request": "~2.65.0"
+    "request": "~2.65.0",
+    "sleep": "~3.0.0"
   }
 }
