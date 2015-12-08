@@ -5,7 +5,7 @@ var config = require('./webpack.config');
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
-  quiet:true,
+  quiet:false,
   stats: { colors: true },
   historyApiFallback: true
 }).listen(3009, 'localhost', function (err, result) {
