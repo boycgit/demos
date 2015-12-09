@@ -20,4 +20,4 @@ tnpm start
 
 ## 示例说明
 
-参考系列文章 
+参考系列文章 http://www.jscon.cc/redux-series-1/
