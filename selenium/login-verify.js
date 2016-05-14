@@ -9,8 +9,8 @@ var test = require('selenium-webdriver/testing');
 test.describe('检测登录', function() {
 
     var driver;
-    var usrname = 'rutao1';
-    var pwd = "taobao1234";
+    var usrname = 'uname';
+    var pwd = "passord";
 
   test.before(function() {
   	this.timeout(0);	// 这个不能少，否则会报'timeout of 2000ms exceeded'错误
@@ -23,7 +23,7 @@ test.describe('检测登录', function() {
 
 	  	this.timeout(0);
 
-		var baseUrl = "http://daxue.taobao.com";
+		var baseUrl = "http://xxxx.xxxx.com";
 
 
 		driver.get(baseUrl);
