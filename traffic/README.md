@@ -1,4 +1,4 @@
-# React + Readux 示例 ： 交通灯
+# React + Redux 示例 ： 交通灯
 
 效果图：
 
@@ -21,3 +21,4 @@ tnpm start
 ## 示例说明
 
 参考系列文章 http://www.jscon.cc/redux-series-1/
+
