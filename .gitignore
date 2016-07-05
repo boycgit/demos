@@ -15,3 +15,8 @@ dist/
 */dist/
 */bower_components/
 */node_modules/
+
+.idea/
+
+vote/bin/auto.err
+vote/bin/auto.log
