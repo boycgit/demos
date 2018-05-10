@@ -58,7 +58,7 @@ var filename = process.argv[2];
 console.log('正在读取'+filename+'文件....');
 
 console.log('开始分析代码');
-var code = fs.readFileSync(filename);
+var code = fs.readFileSync(filenamevar code = fs.readFileSync(filename););
 
 analysis(code);
 console.log("---分析完毕---");

@@ -20,3 +20,4 @@ dist/
 
 vote/bin/auto.err
 vote/bin/auto.log
+npm-debug.log
