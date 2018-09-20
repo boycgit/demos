@@ -1,0 +1,11 @@
+{
+  "name": "micro-ws",
+  "version": "1.0.0",
+  "description": "learn websocket knowledge by creating micro ws service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
