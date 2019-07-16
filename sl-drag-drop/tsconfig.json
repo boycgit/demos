@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "target": "es5",
+        "jsx": "react",
+        "downlevelIteration": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "rootDirs": [
+            "src",
+            "stories"
+        ],
+        "baseUrl": "src",
+        "lib": [
+            "es5",
+            "es6",
+            "es2017",
+            "dom"
+        ]
+    },
+    "include": [
+        "./src/**/*.ts"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "reportFiles": [
+            "./src/**/*"
+        ]
+    }
+}

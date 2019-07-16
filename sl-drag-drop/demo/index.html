@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title> DEMO -
+        <%= htmlWebpackPlugin.options.title %> - DEMO 页面
+    </title>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script src="//unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <!-- Dependencies -->
+    <% if (webpackConfig.mode == 'production') { %>
+    <script src="//unpkg.com/react@16.8.0/umd/react.production.min.js"></script>
+    <script src="//unpkg.com/react-dom@16.8.0/umd/react-dom.production.min.js"></script>
+    <script src="//unpkg.com/mobx@4.6.0/lib/mobx.umd.min.js"></script>
+    <script src="//unpkg.com/mobx-react-lite@1.0.1/dist/index.min.js"></script>
+    <script src="//unpkg.com/mobx-state-tree@3.7.1/dist/mobx-state-tree.umd.js"></script>
+    <script src="//unpkg.com/ss-tree@1.0.5/dist/index.umd.min.js"></script>
+
+    <script src="//unpkg.com/ette/dist/index.umd.min.js"></script>
+    <script src="//unpkg.com/ette-router/dist/index.umd.min.js"></script>
+    <script src="//unpkg.com/ette-proxy/dist/index.umd.js"></script>
+    <script src="//unpkg.com/moment@2.22.2/min/moment.min.js"></script>
+
+    <script src="//unpkg.com/antd@3.19.5/dist/antd.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/antd@3.19.5/dist/antd.min.css">
+    <script src="https://unpkg.com/styled-components@4.1.3/dist/styled-components.min.js"></script>
+    <script src="//unpkg.com/ide-lib-utils/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ide-lib-base-component/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ide-lib-engine/dist/index.umd.js"></script>
+    
+
+    <% } else { %>
+    <script src="//unpkg.com/react@16.8.0/umd/react.development.js"></script>
+    <script src="//unpkg.com/react-dom@16.8.0/umd/react-dom.development.js"></script>
+
+    <script src="//unpkg.com/mobx@4.6.0/lib/mobx.umd.js"></script>
+    <script src="//unpkg.com/mobx-react@5.3.6/index.js"></script>
+    <script src="//unpkg.com/mobx-react-lite@1.0.1/dist/index.js"></script>
+
+    <script src="//unpkg.com/mobx-state-tree@3.7.1/dist/mobx-state-tree.umd.js"></script>
+    <script src="//unpkg.com/ss-tree@1.0.5/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ette/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ette-router/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ette-proxy/dist/index.umd.js"></script>
+
+    <script src="//unpkg.com/moment@2.22.2/moment.js"></script>
+    <script src="//unpkg.com/antd@3.19.5/dist/antd.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/antd@3.19.5/dist/antd.css">
+    <script src="https://unpkg.com/styled-components@4.1.3/dist/styled-components.min.js"></script>
+    <script src="//unpkg.com/ide-lib-utils/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ide-lib-base-component/dist/index.umd.js"></script>
+    <script src="//unpkg.com/ide-lib-engine/dist/index.umd.js"></script>
+
+
+    <% } %>
+
+</body>
+
+</html>

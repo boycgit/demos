@@ -1,0 +1,70 @@
+{
+  "name": "sl-drag-drop",
+  "version": "0.1.0",
+  "description": "composer drag panel",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.umd.js",
+  "browser": "dist/index.umd.js",
+  "idebug": "src/index.tsx",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "homepage": "https://one-gourd.github.io/sl-drag-drop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/one-gourd/sl-drag-drop.git"
+  },
+  "scripts": {
+    "dev": "ide-cli dev",
+    "test": "./node_modules/.bin/jest",
+    "release": "npx standard-version",
+    "build": "ide-cli build",
+    "pregh-pages": "node ./node-helper/download-code-worker.js",
+    "gh-pages": "webpack --config webpack.gh-pages.js && npx gh-pages -d public"
+  },
+  "keywords": [],
+  "author": "boycgit",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@types/chance": "^1.0.1",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.8",
+    "@types/react": "16.x.x",
+    "@types/react-dom": "16.x.x",
+    "@types/styled-components": "^4.1.4",
+    "chance": "^1.0.16",
+    "ts-import-plugin": "^1.5.5",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "typescript": "3.3.4000"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "ide-lib-utils": "0.x",
+    "ide-lib-base-component": "0.x",
+    "ide-lib-engine": "0.x",
+    "ette": "0.x",
+    "ette-proxy": "0.x",
+    "ette-router": "0.x",
+    "antd": "3.x",
+    "mobx": "4.x",
+    "mobx-react": "5.x",
+    "mobx-react-lite": "1.x",
+    "mobx-state-tree": "3.10.x",
+    "react": "16.x",
+    "styled-components": "4.x.x",
+    "react-dom": "16.x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
