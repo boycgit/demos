@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es2022",
+    "moduleResolution":"Node",
+    "lib": [
+      "es2022",
+      "esnext.decorators",
+      "dom"
+    ],
+    "allowJs": true
+  },
+  "files": ["src/index.ts"]
+}
